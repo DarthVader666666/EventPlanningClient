@@ -18,6 +18,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>The Best Event Planning App</h1>
+      <h3>{process.env.REACT_APP_ENV}</h3>
       <div className="links">
         <Link to="/">Home</Link>
         {
