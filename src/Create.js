@@ -5,8 +5,8 @@ import { useNavigate } from "react-router";
 const Create = () => {
   const serverBaseUrl = process.env.REACT_APP_API_URL;
   const [title, setTitle] = useState('');
-  const [themeId, setThemeId] = useState(null);
-  const [subThemeId, setSubThemeId] = useState(null);
+  const [themeId, setThemeId] = useState('');
+  const [subThemeId, setSubThemeId] = useState('');
   const [date, setDate] = useState('');
   const [location, setLocation] = useState('');
   const { data: themes } = useFetch(`${serverBaseUrl}/themes/`);
