@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const EventDetails = () => {
   const { eventId } = useParams();
-  const serverBaseUrl = process.env.REACT_APP_API_URL;
+  const serverBaseUrl = process.env.REACT_APP_ENV === 'Development' ? process.env.REACT_APP_API_URL : '';
   const { data: event } = useFetch('/events/' + eventId);
   const [isPending, setPending] = useState(false);
   const navigate = useNavigate();

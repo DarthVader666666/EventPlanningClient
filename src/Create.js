@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 import { useNavigate } from "react-router";
 
 const Create = () => {
-  const serverBaseUrl = process.env.REACT_APP_API_URL;
+  const serverBaseUrl = process.env.REACT_APP_ENV === 'Development' ? process.env.REACT_APP_API_URL : '';
   const [title, setTitle] = useState('');
   const [themeId, setThemeId] = useState('');
   const [subThemeId, setSubThemeId] = useState('');

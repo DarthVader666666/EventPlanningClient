@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 const Register = () => {
-    const serverBaseUrl = process.env.REACT_APP_API_URL;
+    const serverBaseUrl = process.env.REACT_APP_ENV === 'Development' ? process.env.REACT_APP_API_URL : '';
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [email, setEmail] = useState(null);

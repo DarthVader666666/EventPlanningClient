@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useFetch = (url, method, body) => {
   console.log(url)
-  const baseUrl = process.env.REACT_APP_API_URL;
+  const baseUrl = process.env.REACT_APP_ENV === 'Development' ? process.env.REACT_APP_API_URL : '';
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);

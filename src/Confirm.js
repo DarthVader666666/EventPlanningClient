@@ -4,7 +4,7 @@ import useFetch from "./useFetch.js";
 const Confirm = () => {
   const { userId } = useParams();  
   const { eventId } = useParams();
-  const serverBaseUrl = process.env.REACT_APP_API_URL;
+  const serverBaseUrl = process.env.REACT_APP_ENV === 'Development' ? process.env.REACT_APP_API_URL : '';
   const navigate = useNavigate();
 
   const email = sessionStorage.getItem('user_name');
