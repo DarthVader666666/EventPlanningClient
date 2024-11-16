@@ -10,8 +10,9 @@ const useFetch = (url, method, body) => {
 
   useEffect(() => {
     const token = sessionStorage.getItem("access_token");
-
-    fetch(baseUrl + url, 
+    const fullUrl = baseUrl + url;
+    console.log(fullUrl)
+    fetch(fullUrl, 
         { 
           method: method ? method : 'GET',
           body: body,
@@ -53,7 +54,7 @@ const useFetch = (url, method, body) => {
           }
         })
       },
-   [url,method,body])
+   [baseUrl + url,method,body])
 
   return { data, isPending, error, status };
 }
