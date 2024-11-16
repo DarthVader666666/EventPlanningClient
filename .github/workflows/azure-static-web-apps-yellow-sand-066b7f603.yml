@@ -35,8 +35,8 @@ jobs:
           app_build_command: 'npm run build'
           ###### End of Repository/Build Configurations ######
         env: # Add environment variables here
-          REACT_APP_ENV: ${{ secrets.REACT_APP_ENV}}
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL}}
+          REACT_APP_ENV: Production
+          CI: false
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
