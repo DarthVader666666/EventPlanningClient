@@ -1,11 +1,11 @@
 {
   "routes": [
     {
-      "route": " https://yellow-sand-066b7f603.5.azurestaticapps.net/events",
+      "route": " https://yellow-sand-066b7f603.5.azurestaticapps.net/events/",
       "methods": [
         "get"
       ],
-      "redirect": "https://event-planning-server.azurewebsites.net/events"
+      "redirect": "https://event-planning-server.azurewebsites.net/events/"
     }
   ]
 }
