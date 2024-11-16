@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <Router future={{
-      v7_relativeSplatPath: true,
+      v7_startTransition: true,
     }}>
       <div className="App">
         <Navbar />
