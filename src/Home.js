@@ -2,9 +2,7 @@ import EventList from "./EventList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  // const environmentName = process.env.REACT_APP_ENV;
-  const url = process.env.REACT_APP_API_URL + '/events/';
-  const { error, isPending, data: events } = useFetch(url)
+  const { error, isPending, data: events } = useFetch('/events/')
 
   return (
     <div className="home">

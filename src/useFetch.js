@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useFetch = (url, method, body) => {
   console.log(url)
+  const baseUrl = process.env.REACT_APP_API_URL;
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
@@ -10,7 +11,7 @@ const useFetch = (url, method, body) => {
   useEffect(() => {
     const token = sessionStorage.getItem("access_token");
 
-    fetch(url, 
+    fetch(baseUrl + url, 
         { 
           method: method ? method : 'GET',
           body: body,
